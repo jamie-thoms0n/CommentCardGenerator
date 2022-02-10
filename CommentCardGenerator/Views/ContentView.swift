@@ -26,7 +26,7 @@ struct ContentView: View {
                     //happiness
                     Slider(
                         value: $commentGen.happiness,
-                        in: 1...10,
+                        in: 0...10,
                         step: 1
                     ){
                         Text("")
