@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CommentView: View {
-    @ObservedObject var commentGen = CommentGenerator()
+    @State var commentGen: CommentGenerator
     var body: some View {
         Text(commentGen.generateComment())
     }
@@ -16,6 +16,6 @@ struct CommentView: View {
 
 struct CommentView_Previews: PreviewProvider {
     static var previews: some View {
-        CommentView()
+        CommentView(commentGen: CommentGenerator())
     }
 }

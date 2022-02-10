@@ -81,7 +81,7 @@ struct ContentView: View {
                         Text("10")}
                     Text("my enjoyability in \(subject) is \(Int(commentGen.enjoyability))")
                 }
-                NavigationLink(destination: CommentView(), label: {
+                NavigationLink(destination: CommentView(commentGen: commentGen), label: {
                     Text("Click to generate comment card")
                         .font(.system(size: 30))
                         .bold()

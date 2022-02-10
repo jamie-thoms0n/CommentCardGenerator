@@ -35,8 +35,8 @@ class CommentGenerator : ObservableObject{
     }
     
     func generateComment() -> String {
-        var integer = Int(happiness)
-        self.sentenceOne = ("I\(self.arrayHappiness[integer]) in maths at the moment")
+        self.integer = Int(happiness)
+        self.sentenceOne = ("I \(self.arrayHappiness[integer]) in maths at the moment.")
         return self.sentenceOne
     }
     
