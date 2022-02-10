@@ -13,6 +13,12 @@ class CommentGenerator : ObservableObject{
     @Published var needToWorkMore : Double
     @Published var enjoyability : Double
     @Published var teacherAbility : Double
+    @Published var sentenceOne : String
+    let arrayHappiness : [String]
+    let arrayTwo : [String]
+    let arrayThree : [String]
+    let arrayFour : [String]
+    var integer : Int
     
     init() {
         self.happiness = 0
@@ -20,9 +26,19 @@ class CommentGenerator : ObservableObject{
         self.needToWorkMore = 0
         self.enjoyability = 0
         self.teacherAbility = 0
+        self.arrayHappiness = ["am not very happy with", "am frustrated in", "am not too happy in", "have an amicable relationship with", "am content with", "feel its going ok in" , "am happy with","feel its going great in", "couldnt be happier in"]
+        self.arrayTwo = ["hello"]
+        self.arrayThree = ["hello"]
+        self.arrayFour = ["hello"]
+        self.sentenceOne = "How happy are you in your subject at the moment"
+        self.integer = 0
     }
     
-    
+    func generateComment() -> String {
+        var integer = Int(happiness)
+        self.sentenceOne = ("I\(self.arrayHappiness[integer]) in maths at the moment")
+        return self.sentenceOne
+    }
     
     
 }

@@ -26,21 +26,22 @@ struct ContentView: View {
                     //happiness
                     Slider(
                         value: $commentGen.happiness,
-                        in: 0...10,
+                        in: 1...10,
                         step: 1
-                    )
-                    { minimumValueLabel: {
+                    ){
+                        Text("")
+                    } minimumValueLabel: {
                             Text("0")
                     } maximumValueLabel: {
                         Text("10")
-                    }}
+                    }
                     Text("my happiness in \(subject) is \(Int(commentGen.happiness))")
                     //attainment
                     Slider(
                         value: $commentGen.attainment,
                         in: 0...10,
                         step: 1
-                    ){
+                    ){Text("")
                     } minimumValueLabel: {
                             Text("0")
                     } maximumValueLabel: {
@@ -51,7 +52,7 @@ struct ContentView: View {
                         value: $commentGen.needToWorkMore,
                         in: 0...10,
                         step: 1
-                    ){
+                    ){Text("")
                     } minimumValueLabel: {
                             Text("0")
                     } maximumValueLabel: {
@@ -62,7 +63,7 @@ struct ContentView: View {
                         value: $commentGen.teacherAbility,
                         in: 0...10,
                         step: 1
-                    ){
+                    ){Text("")
                     } minimumValueLabel: {
                             Text("0")
                     } maximumValueLabel: {
@@ -73,7 +74,7 @@ struct ContentView: View {
                         value: $commentGen.enjoyability,
                         in: 0...10,
                         step: 1
-                    ){
+                    ){Text("")
                     } minimumValueLabel: {
                             Text("0")
                     } maximumValueLabel: {
@@ -84,7 +85,7 @@ struct ContentView: View {
                     Text("Click to generate comment card")
                         .font(.system(size: 30))
                         .bold()
-                        .padding
+                        .padding()
             
                 })
             }
@@ -92,6 +93,10 @@ struct ContentView: View {
         
     }
 }
+
+
+
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

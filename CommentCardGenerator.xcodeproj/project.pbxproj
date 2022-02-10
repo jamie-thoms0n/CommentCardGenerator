@@ -75,6 +75,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A97914427B5BD0F00485132 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				426B131327B5437100D93EA2 /* CommentView.swift */,
+				42A377A427B282D200E9FA82 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		42A3779627B282D100E9FA82 = {
 			isa = PBXGroup;
 			children = (
@@ -100,8 +109,7 @@
 			children = (
 				42A377A227B282D200E9FA82 /* CommentCardGeneratorApp.swift */,
 				426B131127B5356000D93EA2 /* CommentGenerator.swift */,
-				42A377A427B282D200E9FA82 /* ContentView.swift */,
-				426B131327B5437100D93EA2 /* CommentView.swift */,
+				1A97914427B5BD0F00485132 /* Views */,
 				42A377A627B282D400E9FA82 /* Assets.xcassets */,
 				42A377A827B282D400E9FA82 /* Preview Content */,
 			);
