@@ -11,6 +11,7 @@ struct CommentView: View {
     @State var commentGen: CommentGenerator
     var body: some View {
         Text(commentGen.generateComment())
+            .padding()
     }
 }
 
